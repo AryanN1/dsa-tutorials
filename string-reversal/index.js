@@ -5,29 +5,19 @@
   //reverse('apple') = 'leppa'
   //reverse('hello') = 'olleh'
   //reverse('Greetings!') = '!sgnteerG'
-
-  function reverse (str) {
-    return str.split('')
-    .reduce((rev, char) => 
-      char + rev, '');
+  
+  function reverseString (str) {
+    let reverse = '';
+    for(let i=str.length-1; i>=0; i--) {
+      reverse += str[i]
+    }
+    return reverse;
   }
+reverseString('apple');
+reverseString('hello');
+reverseString('Greetings!');
 
-  module.exports = reverse;
-
-          //Solution 1
-    //function reverse (str) {
-    //.return str.split('')
-    //.reverse()
-    //.join('');
-    //}
-
-// Solution 2
-//let reversed = '';
-
-    // For Of Loop \\
-
-//for (let character of str){
-//reversed = character + reversed;
-//}
-
-//return reversed;
+//Output
+console.log(reverseString('apple'));
+console.log(reverseString('hello'));
+console.log(reverseString('Greetings!'));
